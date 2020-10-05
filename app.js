@@ -60,7 +60,7 @@ const lastNames = [
 ];
 
 const randChoice = (arr) => {
-    const randomIndex = Math.round(Math.random()*(arr.length-1));
+    const randomIndex = Math.round(Math.random() * (arr.length - 1));
     return arr[randomIndex];
 };
 
@@ -76,11 +76,11 @@ while (people.length < 20) {
        randomPerson.firstName = randChoice(femaleNames);
    }
    randomPerson.lastName = randChoice(lastNames);
-   randomPerson.age = Math.floor(Math.random()*100);
+   randomPerson.age = Math.floor(Math.random() * 100);
 
    randomPerson.email = randomPerson.firstName.toLocaleLowerCase() + '.' + randomPerson.lastName.toLocaleLowerCase() + '@gmail.com';
 
-   randomPerson.phone = Math.round(Math.random()*(999999999-100000000)+100000000);
+   randomPerson.phone = Math.round(Math.random() * (999999999 - 100000000) + 100000000);
 
    people.push(randomPerson);
 }
