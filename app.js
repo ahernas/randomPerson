@@ -80,7 +80,15 @@ while (people.length < 20) {
 
    randomPerson.email = randomPerson.firstName.toLocaleLowerCase() + '.' + randomPerson.lastName.toLocaleLowerCase() + '@gmail.com';
 
-   randomPerson.phone = Math.round(Math.random() * (999999999 - 100000000) + 100000000);
+   // function that returns a random number between 1 and 9
+    const firstNumber = Math.round(Math.random() * (9-1) + 1);
+    const phoneNumbers = [firstNumber];
+    for (let i = 0; i < 8; i++ ) {
+        //function that returns a random number between 0 and 9
+        const randomNumber = Math.round(Math.random() * (10-1) );
+        phoneNumbers.push(randomNumber);
+    }
+   randomPerson.phone = phoneNumbers.join('');
 
    people.push(randomPerson);
 }
